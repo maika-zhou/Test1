@@ -11,11 +11,13 @@ public class Tictactoe {
         int mainCounter = 0;
         // Reverse Cross
         int subCounter = 0;
+        //User1: key =0,  User2: key=1
         int key = (moves.length - 1) % 2;
         int[] last = moves[moves.length - 1];
         int reverseCross = last[0] + last[1];
         int mainCross = last[0] - last[1];
         for (int i = 0; i < moves.length; i++) {
+            //Only check last user grid
             if (i % 2 == key) {
                 int[] move = moves[i];
                 if (move[0] == last[0]) {
